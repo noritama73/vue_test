@@ -3,15 +3,17 @@
 
 <body>
     <div id="app">
-        <h1>{{ message }}</h1>
+        <button v-on:click="handleClick">Click</button>
     </div>
     <script src="./ls/vue.js"></script>
     <script>
         Vue.config.devtools = true;
         var app = new Vue({
             el: '#app',
-            data: {
-                message: 'Hello Vue.js!'
+            methods: {
+                handleClick: function(event){
+                    alert(event.taget)
+                }
             }
         })
     </script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="app">
+        <p>{{count}}回クリックしたよ！</p>
+        <button v-on:click="increment">カウントを増やす</button>
+    </div>
+    <script src="../vue.js"></script>
+    <script>
+        Vue.config.devtools = true;
+        var app = new Vue({
+            el: '#app',
+            data: {
+                count: 0
+            },
+            methods: {
+                increment: function(){
+                    this.count ++
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

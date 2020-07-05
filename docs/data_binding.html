@@ -3,17 +3,19 @@
 
 <body>
     <div id="app">
-        <h1>{{ message }}</h1>
+        {{ state }}
     </div>
     <script src="./ls/vue.js"></script>
     <script>
         Vue.config.devtools = true;
+        var state = { count: 0 }
         var app = new Vue({
             el: '#app',
             data: {
-                message: 'Hello Vue.js!'
+                state: state
             }
         })
+        state.conut++
     </script>
 </body>
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            .v-enter-active,.v-leave-active {
+                transition: opacity 1s;
+            }
+            .v-enter,.v-leave-to {
+                opacity: 0;
+            }
+        </style>
+    </head>
+
+<body>
+    <div id="app">
+        <button v-on:click="show=!show">切替</button>
+        <transition>
+            <p v-if="show">Hello!</p>
+        </transition>
+    </div>
+    <script src="./ls/vue.js"></script>
+    <script>
+        Vue.config.devtools = true;
+        var app = new Vue({
+            el: '#app',
+            data: {
+                show: true
+            }
+        })
+    </script>
+</body>
+
+</html>
