@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="app">
+        <input v-model="message">
+        <p>{{message}}</p>
+        <textarea v-model="message"></textarea>
+        <pre>{{message}}</pre>
+        <label>
+            <input type="radio" v-model="val" value="A"> A
+        </label>
+        <label>
+            <input type="radio" v-model="val" value="B"> B
+        </label>
+        <label>
+            <input type="radio" v-model="val" value="C"> C
+        </label>
+        <p>{{val}}</p>
+        <select v-model="valu" multiple>
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+        </select>
+        <p>{{valu}}</p>
+        <input type="file" @change="handlechange">
+        <div v-if="preview"><img v-bind:src="preview"></div>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        Vue.config.devtools = true;
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message:'Hello!',
+                val: [],
+                valu:[],
+                preview:''
+            },
+            methods:{
+                handlechange: function(event){
+                    var file = event.target.files[0]
+                    if(file && file.type.match(/^image\/(png|jpeg)$/)){
+                        this.preview = window.URL.createObjectURL(file)
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
+    <div id="app">
+        <div class="content">...</div>
+        <p>
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+            asdfsadfsdfsadfdsafdfgdfsgfdgasdfsadfsdfsadfdsafdfgdfsgfdg
+        </p>
+        <div @click="scrollTop">
+            ページ上部へ移動
+        </div>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        Vue.config.devtools = true;
+        var scroll = new SmoothScroll()
+        var app = new Vue({
+            el: '#app',
+            methods: {
+                scrollTop: function(){
+                    scroll.animateScroll(0)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
