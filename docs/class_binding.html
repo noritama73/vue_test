@@ -6,19 +6,19 @@
         <p v-bind:class="{child: isChild, 'is-active': isActive}">Text</p>
         <p v-bind:style="{color: textColor, 'background-color': bgColor}">Text</p>
     </div>
-            <script src="./js/vue.js"></script>
-            <script>
-                Vue.config.devtools = true;
-                var app = new Vue({
-                    el: '#app',
-                    data: {
-                        isChild: true,
-                        isActive: true,
-                        textColor: 'red',
-                        bgColor: 'lightgray'
-                    }
-                })
-            </script>
+    <script src="./js/vue.js"></script>
+    <script>
+        Vue.config.devtools = true;
+        var app = new Vue({
+            el: '#app',
+            data: {
+                isChild: true,
+                isActive: true,
+                textColor: 'red',
+                bgColor: 'lightgray'
+            }
+        })
+    </script>
 </body>
 
 </html>

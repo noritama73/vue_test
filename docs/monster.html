@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <style>
-        .tuyoi{
-            color:red;
+        .tuyoi {
+            color: red;
         }
-        .hinshi{
-            color:blue;
+
+        .hinshi {
+            color: blue;
         }
     </style>
 </head>
@@ -16,9 +18,8 @@
         名前<input v-model="name">
         <button v-on:click="doAdd">モンスターを追加</button>
         <ul>
-            <li v-for="(item, index) in list" v-bind:key="item.id"
-            v-if="item.hp"
-            v-bind:class="{tuyoi: item.hp > 300, hinshi: item.hp < 50}">
+            <li v-for="(item, index) in list" v-bind:key="item.id" v-if="item.hp"
+                v-bind:class="{tuyoi: item.hp > 300, hinshi: item.hp < 50}">
                 ID.{{item.id}} {{item.name}} HP.{{item.hp}}
                 <span v-if="item.hp < 50">瀕死！</span>
                 <span v-if="item.hp > 300">つよい！</span>
@@ -34,20 +35,20 @@
             el: '#app',
             data: {
                 name: 'キマイラ',
-                list:[
-                    { id:1, name:'スライム', hp:100 },
-                    { id:2, name:'ゴブリン', hp:200 },
-                    { id:3, name:'ドラゴン', hp:500 }
+                list: [
+                    { id: 1, name: 'スライム', hp: 100 },
+                    { id: 2, name: 'ゴブリン', hp: 200 },
+                    { id: 3, name: 'ドラゴン', hp: 500 }
                 ]
             },
-            created: function(){
-                this.list.forEach(function(item) {
+            created: function () {
+                this.list.forEach(function (item) {
                     this.$set(item, 'active', false)
                 }, this)
             },
             methods: {
-                doAdd: function(){
-                    var max = this.list.reduce(function(a, b) {
+                doAdd: function () {
+                    var max = this.list.reduce(function (a, b) {
                         return a > b.id ? a : b.id
                     }, 0)
                     this.list.push({
@@ -56,10 +57,10 @@
                         hp: 600
                     })
                 },
-                doRemove: function(index){
+                doRemove: function (index) {
                     this.list.splice(index, 1)
                 },
-                doAttack: function(index){
+                doAttack: function (index) {
                     this.list[index].hp -= 10
                 }
             }

@@ -32,15 +32,15 @@
         var app = new Vue({
             el: '#app',
             data: {
-                message:'Hello!',
+                message: 'Hello!',
                 val: [],
-                valu:[],
-                preview:''
+                valu: [],
+                preview: ''
             },
-            methods:{
-                handlechange: function(event){
+            methods: {
+                handlechange: function (event) {
                     var file = event.target.files[0]
-                    if(file && file.type.match(/^image\/(png|jpeg)$/)){
+                    if (file && file.type.match(/^image\/(png|jpeg)$/)) {
                         this.preview = window.URL.createObjectURL(file)
                     }
                 }
